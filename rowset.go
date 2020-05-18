@@ -252,6 +252,9 @@ func (r *rowSet) Scan(dest ...interface{}) error {
 
 //Convert from a hive column type to a Go type
 func (r *rowSet) convertRawValue(raw string, hiveType string) (interface{}, error) {
+	if strings.ToLower(raw) == "null" {
+		return raw,nil
+	}
 	switch hiveType {
 	case "string":
 		return raw, nil

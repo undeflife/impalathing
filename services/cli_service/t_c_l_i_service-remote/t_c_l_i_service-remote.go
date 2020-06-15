@@ -14,7 +14,7 @@ import (
         "strconv"
         "strings"
         "github.com/apache/thrift/lib/go/thrift"
-        "github.com/koblas/impalathing/services/cli_service"
+        "github.com/undeflife/impalathing/services/cli_service"
 )
 
 

@@ -6,8 +6,8 @@ import (
 	"time"
 
 	"github.com/apache/thrift/lib/go/thrift"
-	"github.com/koblas/impalathing/services/beeswax"
-	impala "github.com/koblas/impalathing/services/impalaservice"
+	"github.com/undeflife/impalathing/services/beeswax"
+	impala "github.com/undeflife/impalathing/services/impalaservice"
 )
 
 type Options struct {

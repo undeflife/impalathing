@@ -6,9 +6,9 @@ package cli_service
 import (
 	"bytes"
 	"context"
-	"reflect"
 	"fmt"
 	"github.com/apache/thrift/lib/go/thrift"
+	"reflect"
 )
 
 // (needed to ensure safety because of naive import list construction.)
@@ -24,31 +24,30 @@ var COLLECTION_TYPES []TTypeId
 var TYPE_NAMES map[TTypeId]string
 
 func init() {
-PRIMITIVE_TYPES = []TTypeId{
-    0,     1,     2,     3,     4,     5,     6,     7,     8,     9, }
+	PRIMITIVE_TYPES = []TTypeId{
+		0, 1, 2, 3, 4, 5, 6, 7, 8, 9,}
 
-COMPLEX_TYPES = []TTypeId{
-    10,     11,     12,     13,     14, }
+	COMPLEX_TYPES = []TTypeId{
+		10, 11, 12, 13, 14,}
 
-COLLECTION_TYPES = []TTypeId{
-    10,     11, }
+	COLLECTION_TYPES = []TTypeId{
+		10, 11,}
 
-TYPE_NAMES = map[TTypeId]string{
-    10: "ARRAY",
-    4: "BIGINT",
-    9: "BINARY",
-    0: "BOOLEAN",
-    6: "DOUBLE",
-    5: "FLOAT",
-    3: "INT",
-    11: "MAP",
-    2: "SMALLINT",
-    7: "STRING",
-    12: "STRUCT",
-    8: "TIMESTAMP",
-    1: "TINYINT",
-    13: "UNIONTYPE",
+	TYPE_NAMES = map[TTypeId]string{
+		10: "ARRAY",
+		4:  "BIGINT",
+		9:  "BINARY",
+		0:  "BOOLEAN",
+		6:  "DOUBLE",
+		5:  "FLOAT",
+		3:  "INT",
+		11: "MAP",
+		2:  "SMALLINT",
+		7:  "STRING",
+		12: "STRUCT",
+		8:  "TIMESTAMP",
+		1:  "TINYINT",
+		13: "UNIONTYPE",
+	}
+
 }
-
-}
-

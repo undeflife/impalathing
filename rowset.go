@@ -9,8 +9,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/koblas/impalathing/services/beeswax"
-	impala "github.com/koblas/impalathing/services/impalaservice"
+	"impalathing/services/beeswax"
+	impala "impalathing/services/impalaservice"
 )
 
 type rowSet struct {
@@ -253,7 +253,7 @@ func (r *rowSet) Scan(dest ...interface{}) error {
 //Convert from a hive column type to a Go type
 func (r *rowSet) convertRawValue(raw string, hiveType string) (interface{}, error) {
 	if strings.ToLower(raw) == "null" {
-		return raw,nil
+		return raw, nil
 	}
 	switch hiveType {
 	case "string":
